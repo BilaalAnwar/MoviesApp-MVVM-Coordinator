@@ -79,7 +79,6 @@ extension AllMoviesListViewController {
     
     // Set up the table view with the filtered list based on the search query
     private func setUpCategoriesTableView(with searchQuery: String? = nil) {
-        
     }
 }
 

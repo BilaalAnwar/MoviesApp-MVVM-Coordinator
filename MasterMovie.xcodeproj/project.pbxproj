@@ -39,6 +39,7 @@
 		98EC3DD62B2619F30063091F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC3DD52B2619F30063091F /* BaseViewController.swift */; };
 		98EC3DDA2B261D790063091F /* TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC3DD92B261D790063091F /* TableViewDelegate.swift */; };
 		98EC3DDC2B261D8A0063091F /* TableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC3DDB2B261D8A0063091F /* TableViewCellModel.swift */; };
+		98EC3DDE2B2624BC0063091F /* ExtOfUIIamge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC3DDD2B2624BC0063091F /* ExtOfUIIamge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		98EC3DD52B2619F30063091F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		98EC3DD92B261D790063091F /* TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDelegate.swift; sourceTree = "<group>"; };
 		98EC3DDB2B261D8A0063091F /* TableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellModel.swift; sourceTree = "<group>"; };
+		98EC3DDD2B2624BC0063091F /* ExtOfUIIamge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtOfUIIamge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +265,7 @@
 			children = (
 				98EC3DC72B26128C0063091F /* ExtOfViewController.swift */,
 				98EC3DD12B2615390063091F /* ExtOfUIApplication.swift */,
+				98EC3DDD2B2624BC0063091F /* ExtOfUIIamge.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				98EC3DD22B2615390063091F /* ExtOfUIApplication.swift in Sources */,
 				98EC3DBB2B2610010063091F /* APIClient.swift in Sources */,
 				98EC3D6F2B260A7A0063091F /* AppDelegate.swift in Sources */,
+				98EC3DDE2B2624BC0063091F /* ExtOfUIIamge.swift in Sources */,
 				98EC3DD02B2615120063091F /* AppCoordinator.swift in Sources */,
 				98EC3DB42B260E170063091F /* MovieDetailViewModel.swift in Sources */,
 				98EC3DDA2B261D790063091F /* TableViewDelegate.swift in Sources */,

@@ -14,10 +14,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--All Movies List View Controller-->
+        <!--Movie List-->
         <scene sceneID="43H-F0-nqE">
             <objects>
-                <viewController storyboardIdentifier="AllMoviesListViewController" id="sut-hN-9HN" customClass="AllMoviesListViewController" customModule="MasterMovie" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AllMoviesListViewController" title="Movie List" id="sut-hN-9HN" customClass="AllMoviesListViewController" customModule="MasterMovie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bha-zB-ls2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
