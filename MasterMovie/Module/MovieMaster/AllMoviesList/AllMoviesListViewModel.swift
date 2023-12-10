@@ -13,5 +13,15 @@ class AllMoviesListViewModel {
     init(service: MovieServiceProtocol) {
         self.service = service
     }
+    func updateHomeShortcuts() async throws -> Void {
+        do {
+            progressing = true
+            let _ = try await service.getAllMoviesData()
+            progressing = false
+        } catch {
+            progressing = false
+            throw error
+        }
+    }
 }
 

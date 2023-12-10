@@ -12,9 +12,6 @@
         <array key="Inter-Regular.ttf">
             <string>Inter-Regular</string>
         </array>
-        <array key="Inter-SemiBold.ttf">
-            <string>Inter-SemiBold</string>
-        </array>
     </customFonts>
     <scenes>
         <!--All Movies List View Controller-->
@@ -25,28 +22,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MovieList" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9k-6v-z0f">
-                                <rect key="frame" x="25" y="21.666666666666671" width="77.666666666666671" height="21"/>
-                                <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="18"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="localized" value="Select Bank"/>
-                                </userDefinedRuntimeAttributes>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="253" verticalCompressionResistancePriority="747" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oS7-vZ-2qS">
                                 <rect key="frame" x="0.0" y="122" width="393" height="730"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aG3-Nv-dWS">
-                                <rect key="frame" x="348" y="12" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="aab-Ko-T2O"/>
-                                    <constraint firstAttribute="height" constant="40" id="gse-1P-6pz"/>
-                                </constraints>
-                                <color key="tintColor" red="0.8862745098" green="0.33333333329999998" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title=" " image="multiply" catalog="system"/>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search movie by name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fIN-XL-qS3" customClass="CustomTextField" customModule="JSZindigi" customModuleProvider="target">
                                 <rect key="frame" x="20" y="62" width="353" height="50"/>
                                 <color key="backgroundColor" name="AppSearchTextBackgroundColor"/>
@@ -69,19 +48,19 @@
                         <viewLayoutGuide key="safeArea" id="nOb-Wl-IiW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fIN-XL-qS3" firstAttribute="top" secondItem="aG3-Nv-dWS" secondAttribute="bottom" constant="10" id="6no-sD-A22"/>
-                            <constraint firstItem="A9k-6v-z0f" firstAttribute="leading" secondItem="bha-zB-ls2" secondAttribute="leading" constant="25" id="7US-f9-kWf"/>
-                            <constraint firstItem="A9k-6v-z0f" firstAttribute="centerY" secondItem="aG3-Nv-dWS" secondAttribute="centerY" id="ACh-I5-cc3"/>
+                            <constraint firstItem="fIN-XL-qS3" firstAttribute="top" secondItem="nOb-Wl-IiW" secondAttribute="top" constant="3" id="9w7-C9-lgR"/>
                             <constraint firstAttribute="trailing" secondItem="fIN-XL-qS3" secondAttribute="trailing" constant="20" id="Dmh-8C-Csg"/>
                             <constraint firstItem="oS7-vZ-2qS" firstAttribute="bottom" secondItem="bha-zB-ls2" secondAttribute="bottom" id="FYy-nO-Z76"/>
                             <constraint firstItem="oS7-vZ-2qS" firstAttribute="leading" secondItem="bha-zB-ls2" secondAttribute="leading" id="VBV-lg-h2l"/>
-                            <constraint firstItem="aG3-Nv-dWS" firstAttribute="top" secondItem="bha-zB-ls2" secondAttribute="top" constant="12" id="XEZ-qx-ErT"/>
-                            <constraint firstAttribute="trailing" secondItem="aG3-Nv-dWS" secondAttribute="trailing" constant="5" id="YtG-GM-X2R"/>
                             <constraint firstItem="oS7-vZ-2qS" firstAttribute="top" secondItem="fIN-XL-qS3" secondAttribute="bottom" constant="10" id="shZ-Ze-Cmr"/>
                             <constraint firstAttribute="trailing" secondItem="oS7-vZ-2qS" secondAttribute="trailing" id="y9c-2g-MBc"/>
                             <constraint firstItem="fIN-XL-qS3" firstAttribute="leading" secondItem="bha-zB-ls2" secondAttribute="leading" constant="20" id="z5z-Wy-pE3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchTextField" destination="fIN-XL-qS3" id="4pi-Pk-wc0"/>
+                        <outlet property="tableView" destination="oS7-vZ-2qS" id="YaA-rv-NCT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5vE-RT-6S9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,7 +68,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="multiply" catalog="system" width="128" height="111"/>
         <image name="searchIcon" width="16" height="16"/>
         <namedColor name="AppSearchTextBackgroundColor">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
