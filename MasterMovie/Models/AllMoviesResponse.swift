@@ -8,17 +8,29 @@
 import Foundation
 
 struct AllMovieResponse : Codable {
-    let responseCode : String?
-    let responseDescription : String?
-    let title : String?
-    let image : String?
-    let description : String?
+    let page, total_pages, total_results : Int?
+    let results : [MovieItemResponse]?
     
     enum CodingKeys: String, CodingKey {
-        case title = "title"
-        case image = "image"
-        case description = "description"
-        case responseCode = "responseCode"
-        case responseDescription = "responseDescription"
+        case page = "page"
+        case results = "results"
+        case total_pages = "total_pages"
+        case total_results = "total_results"
+    }
+}
+
+struct MovieItemResponse : Codable {
+    let backdrop_path : String?
+    let id : Int?
+    let original_language : String?
+    let original_title : String?
+    let overview : String?
+    
+    enum CodingKeys: String, CodingKey {
+        case backdrop_path = "backdrop_path"
+        case id = "id"
+        case original_language = "original_language"
+        case original_title = "original_title"
+        case overview = "overview"
     }
 }

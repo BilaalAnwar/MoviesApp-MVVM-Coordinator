@@ -89,8 +89,7 @@ extension APIClient {
             return nil
         }
         // Append the endpoint path to the base URL
-        urlComponent.path.append(router.path)
-
+        urlComponent.path.append("\(router.path)")
         let parameters = router.parameters
         
         var urlRequest: URLRequest?

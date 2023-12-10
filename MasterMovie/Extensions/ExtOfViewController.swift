@@ -12,3 +12,8 @@ extension UIViewController {
         return String(describing: self)
     }
 }
+extension String {
+    var isNotEmpty: Bool {
+        !isEmpty
+    }
+}

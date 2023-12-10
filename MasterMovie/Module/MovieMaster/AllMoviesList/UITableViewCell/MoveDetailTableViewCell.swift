@@ -12,7 +12,7 @@ class MoveDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    var movieDetail: AllMovieResponse!
+    var movieDetail: MovieItemResponse!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,10 +28,10 @@ class MoveDetailTableViewCell: UITableViewCell {
 }
 extension MoveDetailTableViewCell: CellUpdating {
     func update(_ data: CellData) {
-        movieDetail = data as? AllMovieResponse
-        self.titleLabel?.text = movieDetail.title
-        
-        if let urlString = movieDetail.image?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let url = URL(string: urlString) {
+        movieDetail = data as? MovieItemResponse
+        self.titleLabel?.text = movieDetail.original_title
+        let imageUrl : String = "https://image.tmdb.org/t/p/w500\(movieDetail.backdrop_path ?? "")"
+        if let urlString = imageUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let url = URL(string: urlString) {
             Task {
                 self.iconImageView?.image = await UIImage.load(url: url)
             }

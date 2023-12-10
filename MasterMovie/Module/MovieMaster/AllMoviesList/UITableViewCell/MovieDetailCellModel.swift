@@ -9,11 +9,11 @@ import Foundation
 
 struct MovieDetailCellModel: TableCellModel {
     var identifier = "MoveDetailTableViewCell"
-    var height: CGFloat = 60
+    var height: CGFloat = 120
     var data: CellData
     var didSelect: ((CellData) -> Void)?
 }
 
-extension AllMovieResponse: CellData {
+extension MovieItemResponse: CellData {
 
 }

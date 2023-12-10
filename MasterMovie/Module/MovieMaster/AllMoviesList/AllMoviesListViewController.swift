@@ -54,13 +54,23 @@ extension AllMoviesListViewController {
         viewModel.$progressing.receive(on: RunLoop.main).sink { [weak self] progressing in
             progressing ? self?.showProgress() : self?.hideProgress()
         }.store(in: &subscribers)
+        viewModel.$allMovies.receive(on: RunLoop.main).sink { [weak self] movies in
+            self?.setupAllMoviesData(movies)
+        }.store(in: &subscribers)
     }
     
+    private func setupAllMoviesData(_ allMovies: [MovieItemResponse]) {
+        let cellModels = allMovies.map { movie in
+            MovieDetailCellModel(data: movie)
+        }
+        delegate.cellModels = cellModels
+        tableView.reloadData()
+    }
     // Fetch the list of movies using the ViewModel
     fileprivate func getMoviesList() {
         Task { [weak self] in
             do {
-                try await self?.viewModel.updateHomeShortcuts()
+                try await self?.viewModel.allMovieList()
             } catch {
                 debugPrint(error.localizedDescription)
             }
@@ -74,11 +84,16 @@ extension AllMoviesListViewController {
     // Handle changes in the search query
     @objc private func onSearchQueryChange(_ textField: UITextField) {
         // Set up the table view with the filtered list based on the search query
-        setUpCategoriesTableView(with: textField.text)
+        setUpMovieTableView(with: textField.text)
     }
     
     // Set up the table view with the filtered list based on the search query
-    private func setUpCategoriesTableView(with searchQuery: String? = nil) {
+    private func setUpMovieTableView(with searchQuery: String? = nil) {
+        var movies = self.viewModel.allMovies
+        if let searchQuery, searchQuery.isNotEmpty {
+            movies = movies.filter({ $0.original_title?.lowercased().contains(searchQuery.lowercased()) ?? false })
+        }
+        setupAllMoviesData(movies)
     }
 }
 

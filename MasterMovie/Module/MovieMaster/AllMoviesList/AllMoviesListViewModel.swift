@@ -7,16 +7,19 @@
 
 import Foundation
 
+// ViewModel responsible for managing the data and business logic for displaying a list of movies
 class AllMoviesListViewModel {
     @Published var progressing: Bool = false
+    @Published var allMovies: [MovieItemResponse] = []
     let service: MovieServiceProtocol
     init(service: MovieServiceProtocol) {
         self.service = service
     }
-    func updateHomeShortcuts() async throws -> Void {
+    // Fetch the list of all movies asynchronously
+    func allMovieList() async throws -> Void {
         do {
             progressing = true
-            let _ = try await service.getAllMoviesData()
+            allMovies = try await service.getAllMoviesData()
             progressing = false
         } catch {
             progressing = false

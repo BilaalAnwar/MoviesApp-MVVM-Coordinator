@@ -14,8 +14,7 @@ public enum HTTPMethod: String {
 
 
 enum APIRouter {
-    case allMovies(mobileNo: String)
-    case movieDetail(mobileNo: String)
+    case allMovies
     
     var method: HTTPMethod {
         return .get
@@ -25,31 +24,29 @@ enum APIRouter {
         switch self {
         case .allMovies:
             return "movie/popular"
-        case .movieDetail:
-            return "movie/popular"
         }
     }
     
     // Parameters for each API call
     var parameters: [String: String] {
-        return [:]
+        // Common headers
+        let parameter: [String: String] = [
+            "accept": "application/json",
+            "api_key": Constants.movieApiKey
+        ]
+        return parameter
     }
     // Headers for each API call
     var headers: [String: String] {
         // Common headers
-        let header: [String: String] = [
-            "accept": "application/json",
-            "api_key": Constants.movieApiKey
-        ]
+        let header: [String: String] = [:]
         return header
     }
     var body: [String: Any] {
         var body: [String: Any]
         switch self {
-        case .allMovies(mobileNo: let mobileNo):
-            body = ["mobileNo": mobileNo]
-        case .movieDetail(mobileNo: let mobileNo):
-            body = ["mobileNo": mobileNo]
+        case .allMovies:
+            body = [:]
         }
         return body
     }

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol MovieServiceProtocol {
-    func getAllMoviesData() async throws ->  AllMovieResponse
+    func getAllMoviesData() async throws ->  [MovieItemResponse]
 }
 
 class MovieService : MovieServiceProtocol {
@@ -16,13 +16,14 @@ class MovieService : MovieServiceProtocol {
     required init(apiClient: APIClientProtocol) {
         self.apiClient = apiClient
     }
-    func getAllMoviesData() async throws ->  AllMovieResponse {
-        let apiRouter = APIRouter.allMovies(mobileNo: "")
+    func getAllMoviesData() async throws ->  [MovieItemResponse] {
+        let apiRouter = APIRouter.allMovies
         let response: APIResponse<AllMovieResponse> = try await apiClient.sendRequest(apiRouter)
         let responseResult = response.result
-        if responseResult.responseCode == "200" {
-            return responseResult
-        }
-        throw APIError.other(responseResult.responseDescription ?? "")
+        if let moviesList = responseResult.results {
+            return moviesList
+
+      }
+        throw APIError.other("Something went wrong")
     }
 }
