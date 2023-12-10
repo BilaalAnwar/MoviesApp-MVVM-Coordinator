@@ -35,6 +35,8 @@
 		98EC3DCE2B2614250063091F /* AllMoviesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC3DCD2B2614250063091F /* AllMoviesResponse.swift */; };
 		98EC3DD02B2615120063091F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC3DCF2B2615120063091F /* AppCoordinator.swift */; };
 		98EC3DD22B2615390063091F /* ExtOfUIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC3DD12B2615390063091F /* ExtOfUIApplication.swift */; };
+		98EC3DD42B2619BA0063091F /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC3DD32B2619BA0063091F /* LoadingViewController.swift */; };
+		98EC3DD62B2619F30063091F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC3DD52B2619F30063091F /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		98EC3DCD2B2614250063091F /* AllMoviesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMoviesResponse.swift; sourceTree = "<group>"; };
 		98EC3DCF2B2615120063091F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		98EC3DD12B2615390063091F /* ExtOfUIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtOfUIApplication.swift; sourceTree = "<group>"; };
+		98EC3DD32B2619BA0063091F /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		98EC3DD52B2619F30063091F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +236,7 @@
 		98EC3DB82B260FAA0063091F /* BaseController */ = {
 			isa = PBXGroup;
 			children = (
+				98EC3DD52B2619F30063091F /* BaseViewController.swift */,
 			);
 			path = BaseController;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 				98EC3DC22B2611F50063091F /* ViewControllerFactory.swift */,
 				98EC3DC42B2612230063091F /* Storyboard.swift */,
 				98EC3DCF2B2615120063091F /* AppCoordinator.swift */,
+				98EC3DD32B2619BA0063091F /* LoadingViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -407,6 +413,7 @@
 				98EC3DC82B26128C0063091F /* ExtOfViewController.swift in Sources */,
 				98EC3DB62B260E230063091F /* MovieDetailCoordinator.swift in Sources */,
 				98EC3DCC2B2614020063091F /* MovieMasterService.swift in Sources */,
+				98EC3DD62B2619F30063091F /* BaseViewController.swift in Sources */,
 				98EC3DBD2B26100C0063091F /* APIRouter.swift in Sources */,
 				98EC3DAC2B260D8A0063091F /* MoveDetailTableViewCell.swift in Sources */,
 				98EC3DAF2B260DA10063091F /* MovieDetailCellModel.swift in Sources */,
@@ -423,6 +430,7 @@
 				98EC3DB22B260E090063091F /* MovieDetailViewController.swift in Sources */,
 				98EC3DC12B2610B90063091F /* Constants.swift in Sources */,
 				98EC3D712B260A7A0063091F /* SceneDelegate.swift in Sources */,
+				98EC3DD42B2619BA0063091F /* LoadingViewController.swift in Sources */,
 				98EC3DCE2B2614250063091F /* AllMoviesResponse.swift in Sources */,
 				98EC3DBF2B26101C0063091F /* APIError.swift in Sources */,
 			);
