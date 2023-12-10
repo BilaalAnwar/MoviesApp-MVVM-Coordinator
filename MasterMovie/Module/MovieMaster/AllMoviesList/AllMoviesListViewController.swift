@@ -61,7 +61,9 @@ extension AllMoviesListViewController {
     
     private func setupAllMoviesData(_ allMovies: [MovieItemResponse]) {
         let cellModels = allMovies.map { movie in
-            MovieDetailCellModel(data: movie)
+            MovieDetailCellModel(data: movie) { [weak self] _ in
+                self?.coordinator.movieDetailViewController(selectedMovie: movie)
+            }
         }
         delegate.cellModels = cellModels
         tableView.reloadData()

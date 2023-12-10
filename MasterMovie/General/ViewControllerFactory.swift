@@ -12,6 +12,7 @@ import UIKit
 protocol ViewControllerFactoryProtocol {
     init(apiClient: APIClientProtocol)
     func allMoviesListViewController(navigationController: UINavigationController) -> AllMoviesListViewController
+    func movieDetailViewController(navigationController: UINavigationController , movie: MovieItemResponse) -> MovieDetailViewController
 }
 
 // Implementation of the view controller factory
@@ -29,5 +30,12 @@ class ViewControllerFactory: ViewControllerFactoryProtocol {
         return viewController
     }
 
+    func movieDetailViewController(navigationController: UINavigationController , movie: MovieItemResponse) -> MovieDetailViewController {
+        let viewController = Storyboard.movieMaster.instantiateViewController(identifier: MovieDetailViewController.storyboardIdentifier) as! MovieDetailViewController
+        viewController.viewModel = MovieDetailViewModel(movie: movie)
+        viewController.coordinator = MovieDetailCoordinator(navigationController: navigationController, viewControllerFactory: self)
+        
+        return viewController
+    }
 }
 

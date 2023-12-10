@@ -36,7 +36,7 @@ extension AppCoordinator {
         let navigationBarAppearance = UINavigationBarAppearance()
         navigationBarAppearance.configureWithTransparentBackground()
         navigationBarAppearance.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor : UIColor.blue
+            NSAttributedString.Key.foregroundColor : UIColor.black
         ]
         let backButtonInsets = UIEdgeInsets(top: 0, left: 12, bottom: 3, right: 0)
         let backImage = UIImage(systemName: "arrow.backward")
@@ -44,7 +44,7 @@ extension AppCoordinator {
         let titleOffset = UIOffset(horizontal: -CGFloat.greatestFiniteMagnitude, vertical: 0)
         navigationBarAppearance.titlePositionAdjustment = titleOffset
         navigationBarAppearance.backgroundColor = .systemPink
-        UINavigationBar.appearance().tintColor = .yellow
+        UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().standardAppearance = navigationBarAppearance
         UINavigationBar.appearance().compactAppearance = navigationBarAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance

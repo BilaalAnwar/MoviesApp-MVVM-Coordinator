@@ -30,6 +30,7 @@ extension MoveDetailTableViewCell: CellUpdating {
     func update(_ data: CellData) {
         movieDetail = data as? MovieItemResponse
         self.titleLabel?.text = movieDetail.original_title
+        self.descriptionLabel?.text = movieDetail.overview
         let imageUrl : String = "https://image.tmdb.org/t/p/w500\(movieDetail.backdrop_path ?? "")"
         if let urlString = imageUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let url = URL(string: urlString) {
             Task {

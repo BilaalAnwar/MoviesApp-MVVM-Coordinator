@@ -15,6 +15,10 @@ class AllMoviesListCoordinator {
         self.navigationController = navigationController
         self.viewControllerFactory = viewControllerFactory
     }
+    func movieDetailViewController(selectedMovie movie: MovieItemResponse) {
+        let viewController = viewControllerFactory.movieDetailViewController(navigationController: navigationController, movie: movie)
+        navigationController.pushViewController(viewController, animated: true)
+    }
 }
 
 
