@@ -5,4 +5,17 @@
 //  Created by Bilal Anwar on 12/10/23.
 //
 
-import Foundation
+import UIKit
+import Combine
+
+class AllMoviesListViewController: UIViewController {
+    
+    private var subscribers: Set<AnyCancellable> = []
+    
+    var viewModel: AllMoviesListViewModel!
+    var coordinator: AllMoviesListCoordinator!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}

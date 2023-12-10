@@ -10,13 +10,12 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var appCoordinator: AppCoordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let scene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(windowScene: scene)
+        startApp()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -50,3 +49,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+extension SceneDelegate {
+    func startApp() {
+        // Setup dependancies for factory. That will be used throughout the app
+        let apiClient: APIClientProtocol = APIClient(urlSession: URLSession.shared)
+       
+        let authService = MovieService(apiClient: apiClient)
+        
+        // Set it to AppDelegate as we need to set FirebaseToken in Authentication
+        UIApplication.currentAppDelegate?.movie = authService
+        let factory = ViewControllerFactory(apiClient: apiClient)
+        
+        // Start App
+        appCoordinator = AppCoordinator(window: window!, viewControllerFactory: factory)
+        appCoordinator?.startViewController()
+    }
+}

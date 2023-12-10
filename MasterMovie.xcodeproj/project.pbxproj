@@ -33,6 +33,8 @@
 		98EC3DC82B26128C0063091F /* ExtOfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC3DC72B26128C0063091F /* ExtOfViewController.swift */; };
 		98EC3DCC2B2614020063091F /* MovieMasterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC3DCB2B2614020063091F /* MovieMasterService.swift */; };
 		98EC3DCE2B2614250063091F /* AllMoviesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC3DCD2B2614250063091F /* AllMoviesResponse.swift */; };
+		98EC3DD02B2615120063091F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC3DCF2B2615120063091F /* AppCoordinator.swift */; };
+		98EC3DD22B2615390063091F /* ExtOfUIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC3DD12B2615390063091F /* ExtOfUIApplication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		98EC3DC72B26128C0063091F /* ExtOfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtOfViewController.swift; sourceTree = "<group>"; };
 		98EC3DCB2B2614020063091F /* MovieMasterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMasterService.swift; sourceTree = "<group>"; };
 		98EC3DCD2B2614250063091F /* AllMoviesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMoviesResponse.swift; sourceTree = "<group>"; };
+		98EC3DCF2B2615120063091F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		98EC3DD12B2615390063091F /* ExtOfUIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtOfUIApplication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +242,7 @@
 				98EC3DC02B2610B90063091F /* Constants.swift */,
 				98EC3DC22B2611F50063091F /* ViewControllerFactory.swift */,
 				98EC3DC42B2612230063091F /* Storyboard.swift */,
+				98EC3DCF2B2615120063091F /* AppCoordinator.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				98EC3DC72B26128C0063091F /* ExtOfViewController.swift */,
+				98EC3DD12B2615390063091F /* ExtOfUIApplication.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -408,8 +414,10 @@
 				98EC3DA82B260D5B0063091F /* AllMoviesListCoordinator.swift in Sources */,
 				98EC3DA62B260D4F0063091F /* AllMoviesListViewModel.swift in Sources */,
 				98EC3DC32B2611F50063091F /* ViewControllerFactory.swift in Sources */,
+				98EC3DD22B2615390063091F /* ExtOfUIApplication.swift in Sources */,
 				98EC3DBB2B2610010063091F /* APIClient.swift in Sources */,
 				98EC3D6F2B260A7A0063091F /* AppDelegate.swift in Sources */,
+				98EC3DD02B2615120063091F /* AppCoordinator.swift in Sources */,
 				98EC3DB42B260E170063091F /* MovieDetailViewModel.swift in Sources */,
 				98EC3DA42B260D420063091F /* AllMoviesListViewController.swift in Sources */,
 				98EC3DB22B260E090063091F /* MovieDetailViewController.swift in Sources */,
