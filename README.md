@@ -17,7 +17,7 @@ This iOS app demonstrates the use of the **MVVM (Model-View-ViewModel)** design 
 
 ### Screenshots
 ![Movie List](Image/movieDetail.png)
-![Movie Detail](MoviesApp-MVVM-Coordinator/Image/movieList.png)
+![Movie Detail](Image/movieList.png)
 
 ### Requirements
 
