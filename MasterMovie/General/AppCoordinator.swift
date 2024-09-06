@@ -38,7 +38,7 @@ extension AppCoordinator {
         navigationBarAppearance.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor : UIColor.black
         ]
-        let backButtonInsets = UIEdgeInsets(top: 0, left: 12, bottom: 3, right: 0)
+        _ = UIEdgeInsets(top: 0, left: 12, bottom: 3, right: 0)
         let backImage = UIImage(systemName: "arrow.backward")
         navigationBarAppearance.setBackIndicatorImage(backImage, transitionMaskImage: backImage)
         let titleOffset = UIOffset(horizontal: -CGFloat.greatestFiniteMagnitude, vertical: 0)

@@ -11,6 +11,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     var appCoordinator: AppCoordinator?
+    // Use this property to run mock app
+    private var isMockApp: Bool = false
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
@@ -52,7 +54,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 extension SceneDelegate {
     func startApp() {
         // Setup dependancies for factory. That will be used throughout the app
-        let apiClient: APIClientProtocol = APIClient(urlSession: URLSession.shared)
+        
+        let apiClient: APIClientProtocol = isMockApp ? MockAPIClient(urlSession: URLSession.shared) :
+        APIClient(urlSession: URLSession.shared)
        
         let authService = MovieService(apiClient: apiClient)
         

@@ -57,7 +57,7 @@ struct APIClient: APIClientProtocol {
             // Extract HTTPURLResponse and data from the received response
             let urlResponse = dataResponse?.1 as! HTTPURLResponse
             print(urlResponse.statusCode)
-            var data = dataResponse.0
+            let data = dataResponse.0
             print(String(decoding: data, as: UTF8.self))
             
             // Handle different HTTP status codes
