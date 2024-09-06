@@ -16,8 +16,8 @@ This iOS app demonstrates the use of the **MVVM (Model-View-ViewModel)** design 
 - **Coordinator** for handling navigation between screens.
 
 ### Screenshots
-![Movie List](Image/movieDetail.png)
-![Movie Detail](Image/movieList.png)
+![Movie List](Image/movieList.png)
+![Movie Detail](Image/movieDetail.png)
 
 ### Requirements
 
